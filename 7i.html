@@ -26,10 +26,11 @@
                 } else if (from ==='ft' && to ==='km') {
                     convertResult = length/3281;
                     console.log(`${convertResult} ${to}` )
-                } else if (from && to !== ('ft' || 'km' || 'miles')) {
+                } else if (!['ft', 'km', 'miles'].includes(from) || !['ft', 'km', 'miles'].includes(to)) {
                     console.log('Invalid unit')
                 }
             }
         </script>
     </body>
+
 </html>
